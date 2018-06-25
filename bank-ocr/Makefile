@@ -2,7 +2,7 @@ build: clean
 	@go build -o ocr
 
 test:
-	@go test
+	@go test ./...
 
 clean:
 	@rm -f ocr

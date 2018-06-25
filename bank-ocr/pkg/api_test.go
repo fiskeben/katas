@@ -1,4 +1,4 @@
-package main
+package pkg
 
 import (
 	"reflect"
@@ -308,7 +308,7 @@ func Test_checksum(t *testing.T) {
 	}
 }
 
-func Test_makeReport(t *testing.T) {
+func Test_MakeReport(t *testing.T) {
 	type args struct {
 		data string
 	}
@@ -350,7 +350,7 @@ func Test_makeReport(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := makeReport(tt.args.data); got != tt.want {
+			if got := MakeReport(tt.args.data); got != tt.want {
 				t.Errorf("makeReport() = %v, want %v", got, tt.want)
 			}
 		})
